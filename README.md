@@ -34,5 +34,26 @@
     可以再bilstm行特征
     softmax
     
-test    
+
+2019年的cal阅读理解冠军方案：
+模型图：    
 ![Image text](https://raw.githubusercontent.com/xiaochang129/nlp/master/image/calsquad.jpg)
+
+结构：
+
+    bert+词性特征
+    highway layers(类似残差短连接)
+    双向GRU
+    多层感知机
+    start pro ,end pro   第一个位置预测不可回答，第二个位置预测yes,第三个位置预测no
+
+
+数据增强方案
+
+     1.基于全部民事/刑事文书/去年法研杯数据fine-tune。效果有很大提升。
+     2.在不可回答问题上，通过命名实体识别来替换人名/地名/交换问题位置增加数据量。
+     3.在可回答问题上，通过神经网络模型，获取更多的正向问题。
+
+阈值调整
+
+    在竞赛中，通过调整是否可回答的阈值解决不平衡数据集的问题。
