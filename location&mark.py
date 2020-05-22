@@ -28,7 +28,7 @@ class ReadData(object):
         for i in range(len(self.data["data"])):
             print(i)
             for j in range(len(self.data["data"][i]["paragraphs"])):
-                context += self.data["data"][i]["paragraphs"][j]["context"]
+                context +="\n"+ self.data["data"][i]["paragraphs"][j]["context"]
         return context
 
 
@@ -36,4 +36,5 @@ if __name__ == "__main__":
     import json
     path2 = "D:\\算法工程师\\0.个人介绍与项目介绍\\nlp\\SQUAD\\train-v2.0.json"
     file = ReadData(path2)
-    file.context()
+    f=open("D:\\算法工程师\\0.个人介绍与项目介绍\\nlp\\SQUAD\\context.txt","w",encoding='utf-8')
+    f.write(file.context())
