@@ -34,5 +34,5 @@
     可以再bilstm行特征
     softmax
     
-    
-  ![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
+test    
+![Image text](https://raw.githubusercontent.com/xiaochang129/nlp/master/image/calsquad.jpg)
