@@ -33,3 +33,6 @@
     跟其他行交互（attention/lstm/bilstm等），concate行位置特征
     可以再bilstm行特征
     softmax
+    
+    
+  ![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
