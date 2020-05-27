@@ -2,17 +2,17 @@
      背景：nlp的研究和应用层次是词向量，文本向量（文本表示），文本分类与关联（问答、推理）。
  
 1.onehot/词袋（1954） 
-
+问题：没有上下文
 2.w2v(13)
   CBOW和Skip-gram
-
+问题：计算量大
 3.glove(14)
-
+问题：没有语序
 4.ELMo(18.3)
     网络结构共三层
     第一层是普通的word embedding 可以用wrod2vec或者glove来得到，或者使用character level得到token embedding。 这部分是general embedding，上下文无关。文中使用的是character level的CNN+Highway。
     后面两层是两个biLSTM 去encode 输入（同时也有残差连接), 每一层LSTM得到的输出（隐状态) 作为每个词的上下文相关的word vectors。
-
+问题：准确率不够高
 5.bert(18.9)
     分词：
     mask15%的词
@@ -26,3 +26,6 @@
 
 8.albert（19.9）
     整词屏蔽+连续词屏蔽
+问题：语序通过语序向量实现，顺序性差
+
+9.bert+gru(lstm)
