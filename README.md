@@ -64,7 +64,7 @@
     跟其他行交互（attention/lstm/bilstm等），concate行位置特征
     可以再bilstm行特征
     softmax
-#我的方法优化
+#我的方法优化（05.27）
 
     思路1.bilstm的多页输出，样本平衡，更多特征提取：本页字数、篇幅，查看
     
