@@ -1,0 +1,10 @@
+# bert
+    introduction:
+        language model pre_training is powful.
+        the strategies for appling LM: feature_based(elmo),fine-tuning(GPT)
+        the weakness of above model:unidirectional
+    our model:
+        mask language model,mask some words and predict the id of them.
+        input:token+segment+position embeddings
+        output:masked word+Next sentence prediction
+        transformer structure
