@@ -6,3 +6,13 @@
     nlp.ner(line)   nlp.pos_tag(line)
 
 # jieba
+    1)分词：jieba.cut
+      分词并返回位置：jieba.tokenize
+    2)关键词提取:jieba.analyse.extract_tags
+                jieba.analyse.set_stop_words("stop_words.txt")#停用词库
+                jieba.analyse.set_idf_path("idf.txt.big")     #idf文本库
+                jieba.analyse.extract_tags(s, topK=20, withWeight=True)
+                     输入： s：为待提取的文本
+                     输出：topK个TF/IDF 权重最大的关键词
+    3）词性标注：jieba.posseg as pseg     pseg.cut()
+   
