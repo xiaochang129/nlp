@@ -1,0 +1,8 @@
+# stanfordnlp
+    1) 对一段句子进行分词（word_tokenize）、词性标注（pos_tag:NN,VV,AD等）、
+    命名实体识别（ner:0/PERSON/TITLE）、句法依存分析（dependency_parse）、句法解析（parse）
+    from  stanfordcorenlp import StanfordCoreNLP
+    nlp=StanfordCoreNLP(r'E:\stanford_nlp',lang='zh')
+    nlp.ner(line)   nlp.pos_tag(line)
+
+# jieba
