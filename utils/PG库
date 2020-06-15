@@ -1,0 +1,14 @@
+#python 操作PG库
+
+1.安装与连接
+    import psycopg2
+    conn = psycopg2.connect(database="test",user="postgres",password="postgres",host="127.0.0.1",port="5432")
+    cur = conn.cursor()
+    cur.execute("SELECT name,setting FROM pg_settings")# 查
+    cursor.execute("create table public.members(id integer not null primary key,name varchar(32) not null,..)")#建
+       "insert into public.member(id,name,password,singal) values(1,'member0','password0','signal0')")#增
+        update public.member set name='member X' where id=3#改
+        delete from public.member where id=2 #删
+    rows = cur.fetchall()# rows[i][j]为第i行第j个元素
+    fields = cur.description# fields[i][0]第i个元素的名称
+    conn.close() # 关闭连接
